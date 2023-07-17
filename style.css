@@ -1,0 +1,125 @@
+    @font-face {
+        font-family: 'Arcade Classic';
+        src: url('arcadeclassic.regular.ttf');
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        padding-top: 10px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        font-family: 'Arcade Classic';
+        font-size: 16px;
+    }
+    
+    .box.selected {
+        background-color: white;
+        box-shadow: none;
+    }
+    
+    .mineboard {
+        display: block;
+        margin: auto;
+        width: fit-content;
+        border: 4px solid white;
+        border-top: 4px solid #818181;
+        border-left: 4px solid #818181;
+        display: grid;
+        grid-template-columns: repeat(9, 32px);
+        /* gap: 1px; */
+        background: white;
+    }
+    
+    .box {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        background-color: #BFBFBF;
+        border: 4px solid white;
+        border-right: 4px solid #818181;
+        border-bottom: 4px solid #818181;
+        background-position: center;
+        background-size: 120%;
+        /* transition:0.3s ease */
+    }
+    
+    .box:hover:not(.selected) {
+        background: #ACACAC;
+        border-color: #E5E5E5;
+        border-right: 4px solid #818181;
+        border-bottom: 4px solid #818181;
+    }
+    
+    .box:active:not(.selected) {
+        border-color: #818181;
+        border-right: 4px solid #BFBFBF;
+        border-bottom: 4px solid #BFBFBF;
+    }
+    
+    .header {
+        background-color: #BFBFBF;
+        height: 125px;
+        width: auto;
+        border: 4px solid white;
+        margin-bottom: 25px;
+        border-top: 4px solid #818181;
+        border-left: 4px solid #818181;
+        padding: 15px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: justify;
+    }
+    
+    .container {
+        padding: 18px;
+        /* border: 2px solid yellow; */
+        background: #BFBFBF;
+    }
+    
+    .info {
+        max-width: 180px;
+        width: auto;
+        /* border: 1px solid orange; */
+        margin-right: 3px;
+        color: #585656;
+    }
+    
+    .info span {
+        background-color: black;
+        color: white;
+    }
+    
+    .header .time {
+        width: 78px;
+        height: 49px;
+        background: black;
+        padding: 3px;
+        display: flex;
+    }
+    
+    .header .time span {
+        background-image: url('./assets/zero.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    
+    .bombs--remaining {
+        border-radius: 10px;
+        margin-right: 20px;
+        /* border: 1px solid red; */
+        width: 175px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        padding: 40px 20px;
+    }
